@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include <unistd.h>
+#iclude "main.h"
 
 
 /**
- * _putchar - writes the character c to stdouputt
+ * _putchar - writes the character c to stdout
  * @c: The character to print
  *
  * Return: On success 1.
@@ -16,14 +17,14 @@ int _putchar(char c)
 /**
  *_strlen - reset number
  *Description: This function return a length for some string
- *@i: pointer char
+ *@s: pointer character
  *Return: int length
  */
-int _strlen(char *i)
+int _strlen(char *s)
 {
 	int len = 0;
 
-	while (*i++)
+	while (*s++)
 	{
 		len++;
 	}
@@ -31,40 +32,40 @@ int _strlen(char *i)
 }
 /**
  *_puts - print string
- *Description: print some string
- *@str: pointer char
- *Return: Nothing
+ *Description: print string
+ *@str: pointer character
+ *Return: Null
  */
-void _puts(char *strn)
+void _puts(char *str)
 {
 	int i;
 
-	for (i = 0; i < _strlen(strn); i++)
+	for (i = 0; i < _strlen(str); i++)
 	{
-		_putchar(strn[i]);
+		_putchar(str[i]);
 	}
 }
 /**
- *convert_to - convert integers
- *Description: This function convert integers to other formats
+ *convert_to - convert numbers
+ *Description: This function convert numbers to other formats
  *decimal, octal, hexadecimal, binary etc..
- *@get: char get[] = "0123456789ABCDEF";
+ *@representation: char representation[] = "0123456789ABCDEF";
  *@num: num to tranasform
  *@base: base to transform num
  *Return: number into char pointer
  */
-char *convert_to(char get[], unsigned int num, int base)
+char *convert_to(char representation[], unsigned int num, int base)
 {
-	char *j;
+	char *ptr;
 	static char buffer[128];
 	int mod = 0;
 
-	j = &buffer[127];
-	*j = '\0';
+	ptr = &buffer[127];
+	*ptr = '\0';
 
 	do {
 		mod = num % base;
-		*--j = get[mod];
+		*--ptr = representation[mod];
 		num /= base;
 	} while (num != 0);
 	return (ptr);
