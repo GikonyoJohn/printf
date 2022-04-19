@@ -26,6 +26,6 @@ int print_percent(va_list arguments __attribute__((unused)));
 
 typedef struct flags
 {
-unsigned char flag;
+unsigned char flags;
 unsigned char value;
-} flag_t
+} flags_t
