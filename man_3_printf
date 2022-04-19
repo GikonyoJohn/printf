@@ -6,7 +6,7 @@
 .B #include "main.h"
 
 .B int _printf(const char *
-.I format
+.I format.
 .B , ...)
 .SH DESCRIPTION
 .B _printf()
