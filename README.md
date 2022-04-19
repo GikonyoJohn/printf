@@ -16,6 +16,7 @@ Compilation
 your code will be compiled using $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 Tasks
+
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
 Write a function that produces output according to a format using the following conversion specifiers:
 -c
