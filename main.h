@@ -5,11 +5,14 @@
 #include <stdlib.h>
 #include <unistd.h>
 int _putchar(char c);
-int _puts(char *strn);
-int _strlen(char *i);
+void _puts(char *str);
+int _strlen(char *s);
 int _printf(const char *format, ...);
-void _puts(char *strn);
-char *convert_to(char get[], unsigned int num, int base);
+char *convert_to(char representation[], unsigned int num, int base);
+int function_manager(char c, va_list arg);
+int _switch(char c, va_list arg);
+int print_character(va_list arg);
+
 int print_char(va_list arguments);
 int print_str(va_list arguments);
 int print_nbr(va_list arguments);
