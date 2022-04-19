@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  *_printf - printf
  *@format: const char pointer
@@ -7,18 +7,9 @@
  */
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
-	int (*pfunc)(va_list, flags_t *);
-	const char *p;
-	va_list arguments;
-	flags_t flags = {0,0};
-
-	register int count = 0;
-=======
 	const char *string;
 	int cont = 0;
 	va_list arg;
->>>>>>> 251141831885527ba941a795934f1195a3109613
 
 	if (!format)
 		return (-1);
